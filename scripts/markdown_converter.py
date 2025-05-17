@@ -6,10 +6,10 @@ load_dotenv()
 # Initialize the OpenAI client
 client = OpenAI()
 
-# return markdown from url
-def convert_to_markdown(url: str) -> str:
+# return markdown from urls; it accepts a url and length of the content to return
+def convert_to_markdown(urls: list[str], length: int = 1000) -> str:
     return "Hello, world!"
 
 if __name__ == "__main__":
-    url = "https://www.google.com"  
-    print(convert_to_markdown(url))
+    urls = ["https://www.google.com", "https://www.youtube.com"]  
+    print(convert_to_markdown(urls, 1000))
